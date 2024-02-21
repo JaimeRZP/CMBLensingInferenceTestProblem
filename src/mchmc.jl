@@ -18,7 +18,7 @@ function CMBLensingTarget(prob::CMBLensingLogDensityProblem)
 
     function ℓπ(xt)
         x = inv_transform(xt)
-        return -1.0 .* prob(x)
+        return prob(x)
     end
 
     function ∂lπ∂θ(xt)
