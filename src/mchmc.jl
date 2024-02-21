@@ -2,6 +2,7 @@ function CMBLensingTarget(prob::CMBLensingLogDensityProblem)
     θ_start = prob.Ωstart
     d = length(θ_start)
     θ_names = [string("θ_", i) for i=1:d]
+    Λmass = prob.Λmass
     sqrtΛmass = sqrt(Λmass)
     inv_sqrtΛmass = pinv(sqrtΛmass)
 

@@ -2,7 +2,7 @@
 
 julia_version = "1.9.4"
 manifest_format = "2.0"
-project_hash = "7e887cf1d428bb229ad9b13b718c5111683e234c"
+project_hash = "6705dd57ea8607052529c3115c05e3901eaa09b9"
 
 [[deps.AbstractDifferentiation]]
 deps = ["ExprTools", "LinearAlgebra", "Requires"]
@@ -51,12 +51,6 @@ deps = ["LinearAlgebra", "Printf"]
 git-tree-sha1 = "292e21e99dedb8621c15f185b8fdb4260bb3c429"
 uuid = "7f219486-4aa7-41d6-80a7-e08ef20ceed7"
 version = "0.8.2"
-
-[[deps.AbstractPPL]]
-deps = ["AbstractMCMC", "DensityInterface", "Random", "Setfield", "SparseArrays"]
-git-tree-sha1 = "caa9b62583577b0d6b222f11f54aa29fabbdb5ca"
-uuid = "7a57a42e-76ec-4ea3-a279-07e840d6d9cf"
-version = "0.6.2"
 
 [[deps.AbstractTrees]]
 git-tree-sha1 = "2d9c9a55f9c93e8887ad391fbae72f8ef55e1177"
@@ -194,28 +188,6 @@ version = "1.4.0"
 git-tree-sha1 = "c9b163bd832e023571e86d0b90d9de92a9879088"
 uuid = "e2ed5e7c-b2de-5872-ae92-c73ca462fb04"
 version = "0.1.6"
-
-[[deps.Bijectors]]
-deps = ["ArgCheck", "ChainRules", "ChainRulesCore", "ChangesOfVariables", "Compat", "Distributions", "Functors", "InverseFunctions", "IrrationalConstants", "LinearAlgebra", "LogExpFunctions", "MappedArrays", "Random", "Reexport", "Requires", "Roots", "SparseArrays", "Statistics"]
-git-tree-sha1 = "199dc2c4151db557549a0ad8888ce1a60337ff42"
-uuid = "76274a88-744f-5084-9051-94815aaf08c4"
-version = "0.13.8"
-
-    [deps.Bijectors.extensions]
-    BijectorsDistributionsADExt = "DistributionsAD"
-    BijectorsForwardDiffExt = "ForwardDiff"
-    BijectorsLazyArraysExt = "LazyArrays"
-    BijectorsReverseDiffExt = "ReverseDiff"
-    BijectorsTrackerExt = "Tracker"
-    BijectorsZygoteExt = "Zygote"
-
-    [deps.Bijectors.weakdeps]
-    DistributionsAD = "ced4e74d-a319-5a8a-b0ac-84af2272839c"
-    ForwardDiff = "f6369f11-7733-5829-9624-2563aa707210"
-    LazyArrays = "5078a376-72f3-5289-bfd5-ec5146d43c02"
-    ReverseDiff = "37e2e3b7-166d-5795-8a7a-e32c996b4267"
-    Tracker = "9f7883ad-71c0-57eb-9f7f-b5c9e6d3789c"
-    Zygote = "e88e6eb3-aa80-5325-afca-941959d7151f"
 
 [[deps.BitFlags]]
 git-tree-sha1 = "2dc09997850d68179b69dafb58ae806167a32b1b"
@@ -612,24 +584,6 @@ weakdeps = ["ChainRulesCore", "DensityInterface", "Test"]
     DistributionsDensityInterfaceExt = "DensityInterface"
     DistributionsTestExt = "Test"
 
-[[deps.DistributionsAD]]
-deps = ["Adapt", "ChainRules", "ChainRulesCore", "Compat", "Distributions", "FillArrays", "LinearAlgebra", "PDMats", "Random", "Requires", "SpecialFunctions", "StaticArrays", "StatsFuns", "ZygoteRules"]
-git-tree-sha1 = "060a19f3f879773399a7011676eb273ccc265241"
-uuid = "ced4e74d-a319-5a8a-b0ac-84af2272839c"
-version = "0.6.54"
-
-    [deps.DistributionsAD.extensions]
-    DistributionsADForwardDiffExt = "ForwardDiff"
-    DistributionsADLazyArraysExt = "LazyArrays"
-    DistributionsADReverseDiffExt = "ReverseDiff"
-    DistributionsADTrackerExt = "Tracker"
-
-    [deps.DistributionsAD.weakdeps]
-    ForwardDiff = "f6369f11-7733-5829-9624-2563aa707210"
-    LazyArrays = "5078a376-72f3-5289-bfd5-ec5146d43c02"
-    ReverseDiff = "37e2e3b7-166d-5795-8a7a-e32c996b4267"
-    Tracker = "9f7883ad-71c0-57eb-9f7f-b5c9e6d3789c"
-
 [[deps.DocStringExtensions]]
 deps = ["LibGit2"]
 git-tree-sha1 = "2fb1e02f2b635d0845df5d7c167fec4dd739b00d"
@@ -646,16 +600,6 @@ deps = ["Calculus", "NaNMath", "SpecialFunctions"]
 git-tree-sha1 = "5837a837389fccf076445fce071c8ddaea35a566"
 uuid = "fa6b7ba4-c1ee-5f82-b5fc-ecf0adba8f74"
 version = "0.6.8"
-
-[[deps.DynamicPPL]]
-deps = ["AbstractMCMC", "AbstractPPL", "BangBang", "Bijectors", "ChainRulesCore", "Compat", "ConstructionBase", "Distributions", "DocStringExtensions", "LinearAlgebra", "LogDensityProblems", "MacroTools", "OrderedCollections", "Random", "Requires", "Setfield", "Test", "ZygoteRules"]
-git-tree-sha1 = "50a718301941d4ec4f391aa845ee434fce2dbe2e"
-uuid = "366bfd00-2699-11ea-058f-f148b4cae6d8"
-version = "0.23.21"
-weakdeps = ["MCMCChains"]
-
-    [deps.DynamicPPL.extensions]
-    DynamicPPLMCMCChainsExt = ["MCMCChains"]
 
 [[deps.EllipsisNotation]]
 deps = ["StaticArrayInterface"]
@@ -1541,8 +1485,10 @@ uuid = "c03570c3-d221-55d1-a50c-7939bbd78826"
 version = "0.4.4"
 
 [[deps.MicroCanonicalHMC]]
-deps = ["AbstractMCMC", "Adapt", "DataFrames", "Distributed", "Distributions", "DistributionsAD", "DynamicPPL", "ForwardDiff", "HDF5", "LinearAlgebra", "LogDensityProblems", "LogDensityProblemsAD", "MCMCChains", "MCMCDiagnosticTools", "Markdown", "ProgressMeter", "Random", "Statistics"]
-git-tree-sha1 = "404a6d30d7dc21bf365995a607297898afc4ac3b"
+deps = ["AbstractMCMC", "Adapt", "Distributions", "ForwardDiff", "HDF5", "LinearAlgebra", "LogDensityProblems", "LogDensityProblemsAD", "MCMCChains", "MCMCDiagnosticTools", "Markdown", "ProgressMeter", "Random", "Statistics"]
+git-tree-sha1 = "e846e21d8fe6bc510482b4ac6f3f3d628ada1538"
+repo-rev = "master"
+repo-url = "https://github.com/JaimeRZP/MicroCanonicalHMC.jl.git"
 uuid = "234d2aa0-2291-45f7-9047-6fa6f316b0a8"
 version = "0.1.2"
 
