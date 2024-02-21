@@ -22,7 +22,7 @@ function CMBLensingTarget(prob::CMBLensingLogDensityProblem)
     end
 
     function ∂lπ∂θ(xt)
-        return (ℓπ(xt), CMBLensing.LenseBasis(Zygote.gradient(nlogp, xt)[1]))
+        return (ℓπ(xt), CMBLensing.LenseBasis(Zygote.gradient(ℓπ, xt)[1]))
     end
 
     return MicroCanonicalHMC.Target(

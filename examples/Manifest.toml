@@ -2,7 +2,7 @@
 
 julia_version = "1.9.4"
 manifest_format = "2.0"
-project_hash = "f9620121add9b932bade5f4debcd47ac25d90eae"
+project_hash = "6705dd57ea8607052529c3115c05e3901eaa09b9"
 
 [[deps.AbstractDifferentiation]]
 deps = ["ExprTools", "LinearAlgebra", "Requires"]
@@ -236,6 +236,14 @@ version = "0.10.1"
     MuseInference = "43b88160-90c7-4f71-933b-9d65205cd921"
     PythonCall = "6099a3de-0909-46bc-b1f4-468b9a2dfc0d"
     PythonPlot = "274fc56d-3b97-40fa-a1cd-1b4a50311bf9"
+
+[[deps.CMBLensingInferenceTestProblem]]
+deps = ["CMBLensing", "CUDA", "ComponentArrays", "JLD2", "LaTeXStrings", "LinearAlgebra", "LogDensityProblems", "MCMCDiagnosticTools", "Memoization", "MicroCanonicalHMC", "NamedTupleTools", "Plots", "ProgressMeter", "Zygote"]
+git-tree-sha1 = "cc350515b55af29669f431021ba0a6442ba274a6"
+repo-rev = "main"
+repo-url = "https://github.com/JaimeRZP/CMBLensingInferenceTestProblem.git"
+uuid = "77eb751d-b138-43db-8fbb-26307a053bc2"
+version = "0.1.0"
 
 [[deps.CSV]]
 deps = ["CodecZlib", "Dates", "FilePathsBase", "InlineStrings", "Mmap", "Parsers", "PooledArrays", "PrecompileTools", "SentinelArrays", "Tables", "Unicode", "WeakRefStrings", "WorkerUtilities"]
@@ -1470,7 +1478,7 @@ version = "0.4.4"
 
 [[deps.MicroCanonicalHMC]]
 deps = ["AbstractMCMC", "Adapt", "Distributions", "ForwardDiff", "HDF5", "LinearAlgebra", "LogDensityProblems", "LogDensityProblemsAD", "MCMCChains", "MCMCDiagnosticTools", "Markdown", "ProgressMeter", "Random", "Statistics"]
-git-tree-sha1 = "e846e21d8fe6bc510482b4ac6f3f3d628ada1538"
+git-tree-sha1 = "d980549087d589e5af7fb12e623e75bfc1f9e081"
 repo-rev = "master"
 repo-url = "https://github.com/JaimeRZP/MicroCanonicalHMC.jl.git"
 uuid = "234d2aa0-2291-45f7-9047-6fa6f316b0a8"
