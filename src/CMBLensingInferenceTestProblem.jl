@@ -7,8 +7,11 @@ using LogDensityProblems
 using LinearAlgebra
 using NamedTupleTools
 using Zygote
+using MicroCanonicalHMC
 
 export load_cmb_lensing_problem
+
+include("mchmc.jl")
 
 struct CMBLensingLogDensityProblem
     ds
