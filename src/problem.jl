@@ -38,7 +38,7 @@ function load_cmb_lensing_problem(;
         Diagonal(select(FieldTuple(
             f° = diag(pinv(D)^2 * (pinv(Cf) + B̂'*M̂'*pinv(Cn̂)*M̂*B̂)),
             ϕ° = diag(pinv(G)^2 * (pinv(Cϕ) + pinv(Nϕ))),
-            θ = ComponentVector(r=T(5.85), Aϕ=T(112.09))
+            θ = ComponentVector(r=T(1), Aϕ=T(1))
         ),Ωkeys))
     end
 
