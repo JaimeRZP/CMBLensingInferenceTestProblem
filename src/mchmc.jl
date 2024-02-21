@@ -26,7 +26,7 @@ function CMBLensingTarget(prob::CMBLensingLogDensityProblem)
 
     return MicroCanonicalHMC.Target(
         d,
-        Hamiltonian(ℓπ, ∂lπ∂θ)
+        Hamiltonian(ℓπ, ∂lπ∂θ),
         transform,
         inv_transform,
         θ_start,
