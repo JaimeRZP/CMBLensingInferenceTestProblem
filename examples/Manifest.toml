@@ -239,7 +239,7 @@ version = "0.10.1"
 
 [[deps.CMBLensingInferenceTestProblem]]
 deps = ["CMBLensing", "CUDA", "ComponentArrays", "JLD2", "LaTeXStrings", "LinearAlgebra", "LogDensityProblems", "MCMCDiagnosticTools", "Memoization", "MicroCanonicalHMC", "NamedTupleTools", "Plots", "ProgressMeter", "Zygote"]
-git-tree-sha1 = "74741dfa693262bf2876e3d34d582cebb712b0db"
+git-tree-sha1 = "3b91903863681a226b4aeb0729d60d5ecdb5343d"
 repo-rev = "main"
 repo-url = "https://github.com/JaimeRZP/CMBLensingInferenceTestProblem.git"
 uuid = "77eb751d-b138-43db-8fbb-26307a053bc2"
@@ -1478,7 +1478,7 @@ version = "0.4.4"
 
 [[deps.MicroCanonicalHMC]]
 deps = ["AbstractMCMC", "Adapt", "Distributions", "ForwardDiff", "HDF5", "LinearAlgebra", "LogDensityProblems", "LogDensityProblemsAD", "MCMCChains", "MCMCDiagnosticTools", "Markdown", "ProgressMeter", "Random", "Statistics"]
-git-tree-sha1 = "57a610f7558e95f28b1bb7ff1d1cb29379323bd1"
+git-tree-sha1 = "8da0239324dbcb5e341411161126c99ea14c8aff"
 repo-rev = "master"
 repo-url = "https://github.com/JaimeRZP/MicroCanonicalHMC.jl.git"
 uuid = "234d2aa0-2291-45f7-9047-6fa6f316b0a8"
