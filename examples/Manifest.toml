@@ -2,7 +2,7 @@
 
 julia_version = "1.9.4"
 manifest_format = "2.0"
-project_hash = "6705dd57ea8607052529c3115c05e3901eaa09b9"
+project_hash = "0678a3cd214b2a12002b461b67463e318dd0a9dd"
 
 [[deps.AbstractDifferentiation]]
 deps = ["ExprTools", "LinearAlgebra", "Requires"]
@@ -239,7 +239,7 @@ version = "0.10.1"
 
 [[deps.CMBLensingInferenceTestProblem]]
 deps = ["CMBLensing", "CUDA", "ComponentArrays", "JLD2", "LaTeXStrings", "LinearAlgebra", "LogDensityProblems", "MCMCDiagnosticTools", "Memoization", "MicroCanonicalHMC", "NamedTupleTools", "Plots", "ProgressMeter", "Zygote"]
-git-tree-sha1 = "7f73784077bc5cd9608e0763423fcf1f727e50f1"
+git-tree-sha1 = "74741dfa693262bf2876e3d34d582cebb712b0db"
 repo-rev = "main"
 repo-url = "https://github.com/JaimeRZP/CMBLensingInferenceTestProblem.git"
 uuid = "77eb751d-b138-43db-8fbb-26307a053bc2"
@@ -1478,7 +1478,7 @@ version = "0.4.4"
 
 [[deps.MicroCanonicalHMC]]
 deps = ["AbstractMCMC", "Adapt", "Distributions", "ForwardDiff", "HDF5", "LinearAlgebra", "LogDensityProblems", "LogDensityProblemsAD", "MCMCChains", "MCMCDiagnosticTools", "Markdown", "ProgressMeter", "Random", "Statistics"]
-git-tree-sha1 = "ad04c9b3d750a37c8b48de2e82f78e6e12eaeb78"
+git-tree-sha1 = "57a610f7558e95f28b1bb7ff1d1cb29379323bd1"
 repo-rev = "master"
 repo-url = "https://github.com/JaimeRZP/MicroCanonicalHMC.jl.git"
 uuid = "234d2aa0-2291-45f7-9047-6fa6f316b0a8"
@@ -1540,6 +1540,12 @@ deps = ["DiffResults", "Distributed", "FiniteDiff", "ForwardDiff"]
 git-tree-sha1 = "a0b464d183da839699f4c79e7606d9d186ec172c"
 uuid = "d41bc354-129a-5804-8e4c-c37616107c6c"
 version = "7.8.3"
+
+[[deps.NPZ]]
+deps = ["FileIO", "ZipFile"]
+git-tree-sha1 = "60a8e272fe0c5079363b28b0953831e2dd7b7e6f"
+uuid = "15e1cf62-19b3-5cfa-8e77-841668bca605"
+version = "0.4.3"
 
 [[deps.NaNMath]]
 deps = ["OpenLibm_jll"]
@@ -2473,6 +2479,12 @@ deps = ["Artifacts", "JLLWrappers", "Libdl", "Pkg", "libsodium_jll"]
 git-tree-sha1 = "fe5c65a526f066fb3000da137d5785d9649a8a47"
 uuid = "8f1865be-045e-5c20-9c9f-bfbfb0764568"
 version = "4.3.4+0"
+
+[[deps.ZipFile]]
+deps = ["Libdl", "Printf", "Zlib_jll"]
+git-tree-sha1 = "f492b7fe1698e623024e873244f10d89c95c340a"
+uuid = "a5390f91-8eb1-5f08-bee0-b1d1ffed6cea"
+version = "0.10.1"
 
 [[deps.Zlib_jll]]
 deps = ["Libdl"]
