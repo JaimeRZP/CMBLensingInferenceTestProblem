@@ -1478,7 +1478,7 @@ version = "0.4.4"
 
 [[deps.MicroCanonicalHMC]]
 deps = ["AbstractMCMC", "Adapt", "Distributions", "ForwardDiff", "HDF5", "LinearAlgebra", "LogDensityProblems", "LogDensityProblemsAD", "MCMCChains", "MCMCDiagnosticTools", "Markdown", "ProgressMeter", "Random", "Statistics"]
-git-tree-sha1 = "163e95303183a5d4cacbd08126e3cb192fd8bfd7"
+git-tree-sha1 = "ad04c9b3d750a37c8b48de2e82f78e6e12eaeb78"
 repo-rev = "master"
 repo-url = "https://github.com/JaimeRZP/MicroCanonicalHMC.jl.git"
 uuid = "234d2aa0-2291-45f7-9047-6fa6f316b0a8"

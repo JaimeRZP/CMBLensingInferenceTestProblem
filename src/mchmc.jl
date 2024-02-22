@@ -6,28 +6,22 @@ function CMBLensingTarget(prob::CMBLensingLogDensityProblem)
     sqrtΛmass = sqrt(Λmass)
     inv_sqrtΛmass = pinv(sqrtΛmass)
 
-    function transform(x)
-        xt = CMBLensing.LenseBasis(sqrtΛmass * x)
-        return xt
-    end
-
-    function inv_transform(xt)
-        x = CMBLensing.LenseBasis(inv_sqrtΛmass * xt)
+    function transform(θ)
+        x = CMBLensing.LenseBasis(sqrtΛmass * θ)
         return x
     end
 
-    function ℓπ(xt)
-        x = inv_transform(xt)
-        return prob(x)
+    function inv_transform(x)
+        θ = CMBLensing.LenseBasis(inv_sqrtΛmass * x)
+        return θ
     end
 
-    function ∂lπ∂θ(xt)
-        return (ℓπ(xt), CMBLensing.LenseBasis(Zygote.gradient(ℓπ, xt)[1]))
-    end
+    ℓπ(θ) = prob(θ)
+    ∂lπ∂θ(θ)= (ℓπ(θ), CMBLensing.LenseBasis(Zygote.gradient(ℓπ, θ)[1]))
 
     return MicroCanonicalHMC.Target(
         d,
-        MicroCanonicalHMC.Hamiltonian(ℓπ, ∂lπ∂θ),
+        MicroCanonicalHMC.Hamiltonian(ℓπ, ∂lπ∂θ, inv_transform),
         transform,
         inv_transform,
         θ_start,
