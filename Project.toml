@@ -19,4 +19,6 @@ ProgressMeter = "92933f4c-e287-5a05-a399-4b506db050ca"
 Zygote = "e88e6eb3-aa80-5325-afca-941959d7151f"
 
 [compat]
+CMBLensing = "0.10.1"
+CUDA = "4"
 julia = "1.9"
