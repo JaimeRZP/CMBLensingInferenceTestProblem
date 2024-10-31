@@ -5,6 +5,7 @@ using Adapt, CMBLensing, CMBLensingInferenceTestProblem, CUDA, JLD2, LaTeXString
     LinearAlgebra, MCMCChains, MCMCDiagnosticTools, MuseInference, MicroCanonicalHMC,
     Plots, ProgressMeter, Random, Statistics, Zygote
 
+ENV["GKSwstype"] = "100"
 Plots.default(fmt=:png, dpi=120, size=(500,300), legendfontsize=10)
 
 SCRATCHDIR = ENV["SCRATCH"]
@@ -96,7 +97,7 @@ folder_name = string("MCHMC",
     "_precond_", t,
     "_L_", L,
     "_TEV_", TEV)
-fol_name=joinpath(SCRATCHDIR, Nside, folder_name)
+fol_name=joinpath(SCRATCHDIR, "$(Nside)", folder_name)
 
 last_n = 0 
 if isdir(fol_name)
@@ -234,7 +235,7 @@ folder_name=string("HMC",
     "_Nside_", Nside,
     "_N_", N,
     "_ϵ_", ϵ)
-fol_name=joinpath(SCRATCHDIR, "new_chains", Nside, folder_name)
+fol_name=joinpath(SCRATCHDIR, "new_chains", "$(Nside)", folder_name)
 
 
 if isdir(fol_name)
@@ -392,7 +393,7 @@ folder_name=string("CMBLensing",
     "_cosmo_", global_parameters,
     "_masking_", masking,
     "_Nside_", Nside)
-fol_name = joinpath(SCRATCHDIR, "chains", Nside, "MUSE", folder_name)
+fol_name = joinpath(SCRATCHDIR, "chains", "$(Nside)", "MUSE", folder_name)
 @save fol_name chain_muse
 
 #chain_muse = load("../chains/MUSE/CMBLensing_masked_Nnside_64", "chain_muse")
