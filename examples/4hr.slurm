@@ -17,4 +17,6 @@ echo "Running job with script: $1"
 
 julia --project=. -e "import Pkg; Pkg.instantiate(); Pkg.resolve()"
 julia --project=. -e "import CUDA; CUDA.set_runtime_version!(\"local\")"
-srun julia --project=. $1
+
+echo $1 $2 $3 $4 $5 $6
+srun julia --project=. $1 $2 $3 $4 $5 $6

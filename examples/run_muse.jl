@@ -11,11 +11,12 @@ Plots.default(fmt=:png, dpi=120, size=(500,300), legendfontsize=10)
 SCRATCHDIR = ENV["SCRATCH"]
 println("Writing to scratch directory: $(SCRATCHDIR)")
 
-Nside = 128
+Nside = 512
 T = Float64;
 use_map = true
 masking = false
 t = nothing
+global_parameters = true
 precond_path = string("../pixel_preconditioners/pp_nside_", Nside, "_t_", t)
 println("Nside: ", Nside)
 println("Use Map: ", use_map)
@@ -23,11 +24,11 @@ println("Masking: ", masking)
 
 
 prob = load_cmb_lensing_problem(;storage=CuArray, T, Nside,
-    masking=masking, global_parameters=true);
+    masking=masking, global_parameters=global_parameters);
 d = length(prob.Ωstart)
 
 prob_cpu = load_cmb_lensing_problem(;storage=Array, T, Nside,
-    masking=masking, global_parameters=true);
+    masking=masking, global_parameters=global_parameters);
 to_vec, from_vec = CMBLensingInferenceTestProblem.to_from_vec(prob_cpu.Ωstart);
 
 cl = get_Cℓ(prob.Ωstart[:ϕ°][:I]);
@@ -83,7 +84,7 @@ CMBLensingMuseInferenceExt.mergeθ(prob::CMBLensingMuseInferenceExt.CMBLensingMu
 
 z₀ = zero(MuseInference.sample_x_z(muse_prob, Xoshiro(0), prob.Ωstart.θ).z);
 result = MuseResult()
-nsims = 2000
+nsims = 50  # 1000 for 24 hour job at 512
 rng = Xoshiro(0)
 
 prob.ncalls[] = 0
@@ -100,7 +101,9 @@ folder_name=string("CMBLensing",
     "_cosmo_", global_parameters,
     "_masking_", masking,
     "_Nside_", Nside)
-fol_name = joinpath(SCRATCHDIR, "chains", "$(Nside)", "MUSE", folder_name)
+fol_path = joinpath(SCRATCHDIR, "chains", "$(Nside)", "MUSE")
+fol_name = joinpath(fol_path, folder_name)
+mkpath(fol_path)
 @save fol_name chain_muse
 
 #chain_muse = load("../chains/MUSE/CMBLensing_masked_Nnside_64", "chain_muse")
