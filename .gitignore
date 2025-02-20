@@ -2,3 +2,5 @@
 dev
 *-workspace
 *.mp4
+.vscode/
+*.CondaPkg
