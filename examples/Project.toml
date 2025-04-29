@@ -23,3 +23,15 @@ PythonPlot = "274fc56d-3b97-40fa-a1cd-1b4a50311bf9"
 Revise = "295af30f-e4ad-537b-8983-00126c2a3abe"
 StaticArrays = "90137ffa-7385-5640-81b9-e52037218182"
 Zygote = "e88e6eb3-aa80-5325-afca-941959d7151f"
+
+[extras]
+CUDA_Runtime_jll = "76a88914-d11a-5bdc-97e0-2f5a05c973a2"
+
+[compat]
+CMBLensing = "=0.10.1"
+CUDA = "4"
+julia = "1.9"
+AbstractDifferentiation = "=0.5.2"
+MuseInference = "0.2"
+ForwardDiff = "=0.10.36"
+MicroCanonicalHMC = "=0.1.6"

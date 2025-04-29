@@ -1,4 +1,6 @@
-.ipynb_checkpoints
+*.ipynb_checkpoints
 dev
 *-workspace
 *.mp4
+.vscode/
+*.CondaPkg
